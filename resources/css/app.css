@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .modal__avatar::-webkit-scrollbar {
+        width: 8px; /* ширина scrollbar */
+    }
+
+    .modal__avatar::-webkit-scrollbar-track {
+        background: #171717; /* цвет дорожки */
+        border-radius: 20px;
+    }
+
+    .modal__avatar::-webkit-scrollbar-thumb {
+        background-color: #4D4D4D; /* цвет плашки */
+        border-radius: 20px; /* закругления плашки */
+    }
+
+    .no-scroll {
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+    .search_profile {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        box-sizing: border-box;
+        /*border: 1px solid red;*/
+        background-color: black;
+        z-index: 501;
+        width: 0;
+        height: 100vh;
+        transition: width 0.2s;
+    }
+
+    .search_open {
+        width: 300px;
+        transition: width 0.2s;
+    }
+    .arrow_rotate {
+        transform: rotate(180deg);
+    }
+
+    .cart {
+        display: flex;
+        width: 100%;
+        max-width: 490px;
+        justify-content: space-between;
+    }
+
+    @media (max-width: 450px) {
+        .cart {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+    }
+}
